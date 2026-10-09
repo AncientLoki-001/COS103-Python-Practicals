@@ -1,48 +1,32 @@
 # COS103 Python Practicals (Weeks 1–12)
 
-This repository contains beginner-friendly Python practicals, with each week in its own folder. Each Week 1–10 folder includes a Python source file and a result snapshot under `results/result_snapshot.svg`.
-
-## Weekly guide
-
-| Week | Topic | Extra files / output |
-|---|---|---|
-| 1 | Python introduction, arithmetic and calculator | Result snapshot |
-| 2 | Numbers, variables, data types and shape areas | Result snapshot |
-| 3 | Comparisons, logic, conditionals and grading | Result snapshot |
-| 4 | Strings, palindromes and Hangman | Result snapshot |
-| 5 | Lists, sets and dictionaries | Result snapshot |
-| 6 | Loops, prime numbers, multiplication table and guessing game | Result snapshot |
-| 7 | Functions, lambda, map and filter | Result snapshot |
-| 8 | Recursion, decorators and Tower of Hanoi | Result snapshot |
-| 9 | File handling and CSV | `sample.txt`, `scores.csv`, `students.csv`, result snapshot |
-| 10 | NumPy arrays and matrix multiplication | Result snapshot |
-| 11 | Iris dataset analysis and graphs | Iris CSV and generated graphs |
-| 12 | Decision-tree classification | Iris CSV and decision-tree visualization |
+This repository contains weekly Python practicals, supporting data files, and captured result snapshots.
 
 ## Requirements
 
-- Python 3.10 or newer is recommended.
-- Weeks 1–9 use the Python standard library.
-- Week 10 requires NumPy.
-- Weeks 11–12 use pandas, matplotlib and scikit-learn.
-
-Install the required packages from the repository root:
+- Python 3.10 or newer recommended.
+- Install the packages needed for Weeks 10–12 and data visualization:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-## Running a practical
+Weeks 1–9 mostly use Python's standard library. Week 10 imports NumPy. Weeks 11–12 use pandas, matplotlib, and scikit-learn.
 
-Open a terminal at the repository root and run a week's script. For example:
+## Run a practical
+
+From the repository root, run a week using its path, for example:
 
 ```bash
 python Week_01_Introduction_to_Python/week_01.py
+python Week_09_File_Handling/week_09.py
 python Week_10_NumPy/week_10.py
+python Week_11_Data_Analysis/week11_iris_analysis.py
+python Week_12_Decision_Tree/week12_decision_tree.py
 ```
 
-For Week 9, the script expects `sample.txt`, `scores.csv` and `students.csv` in the same folder as `week_09.py`. The sample files are included. The script rewrites `scores.csv` and appends new records to `students.csv` when you run it.
+For interactive weeks, follow the prompts in the terminal. Week 9 includes `sample.txt`, `scores.csv`, and `students.csv`; its script creates or updates CSV files when run. Weeks 11 and 12 each include their own `Iris.csv` dataset.
 
-The result snapshots are sample outputs from representative runs. Interactive programs will display prompts and results based on the values you enter. Do not enter a real password into the Week 3 classroom example.
+## Result snapshots
 
-Weeks 11–12 include the Iris dataset and their own visual outputs.
+Each Week 1–10 folder contains `results/result_snapshot.svg`, a captured sample output image. Output can differ when different values are entered. Weeks 11–12 include generated analysis and decision-tree visualizations.
