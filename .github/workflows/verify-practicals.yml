@@ -23,17 +23,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          printf '12\n+\n3\n' | python Week_01_Introduction_to_Python/week_01.py
-          printf '25\ncircle\n3\n' | python Week_02_Numbers_and_Data_Types/week_02.py
-          printf '1\nHello123\n75\n' | python Week_03_Conditionals/week_03.py
-          printf 'level\np\ny\nt\nh\no\nn\n' | python Week_04_Strings_and_Hangman/week_04.py
-          printf 'Ada\n12345\n' | python Week_05_Collections/week_05.py
+          printf '10\n+\n3\n' | python Week_01_Introduction_to_Python/week_01.py
+          printf '25\nrectangle\n4\n5\n' | python Week_02_Numbers_and_Data_Types/week_02.py
+          printf '8.5\nPassword1\n82\n' | python Week_03_Conditionals/week_03.py
+          printf 'radar\np\ny\nt\nh\no\nn\n' | python Week_04_Strings_and_Hangman/week_04.py
+          printf 'Ada\n08012345678\n' | python Week_05_Collections/week_05.py
           printf '10\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n' | python Week_06_Loops/week_06.py
           python Week_07_Functions/week_07.py
           python Week_08_Recursion_and_Decorators/week_08.py
       - name: Run Week 9 from repository root
         shell: bash
-        run: printf 'CI Test Student\n85\n' | python Week_09_File_Handling/week_09.py
+        run: printf 'Ada\n85\n' | python Week_09_File_Handling/week_09.py
       - name: Run Week 10 NumPy practical
         run: python Week_10_NumPy/week_10.py
       - name: Run Weeks 11-12 dataset and ML practicals
