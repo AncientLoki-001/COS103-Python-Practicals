@@ -29,4 +29,8 @@ For interactive weeks, follow the prompts in the terminal. Week 9 includes `samp
 
 ## Result snapshots
 
-Each Week 1–10 folder contains `results/result_snapshot.svg`, a captured sample output image. Output can differ when different values are entered. Weeks 11–12 include generated analysis and decision-tree visualizations.
+Each Week 1–10 folder contains `results/result_snapshot.svg`, a sample output image. Output can differ when different values are entered. Weeks 11–12 include generated analysis and decision-tree visualizations.
+
+## Automated verification
+
+GitHub Actions runs a verification workflow on pushes to `main`. It installs the listed dependencies, compiles the Week 1–12 Python files, runs the practicals with sample inputs (including Week 9 from the repository root), runs the NumPy/data-analysis/machine-learning practicals, and checks that all Week 1–10 snapshots exist. See `.github/workflows/verify-practicals.yml` for the exact checks.
