@@ -1,9 +1,15 @@
 # ================= WEEK 9: FILE HANDLING AND I/O OPERATIONS =================
 
-# Exercise 1: Count words, lines and characters in a text file
-# The file is opened in read mode. The contents are then used to count lines, words and characters.
-# A sample file is included in this folder. Keep this script and sample.txt together.
-with open("sample.txt", "r", encoding="utf-8") as file:
+from pathlib import Path
+import csv
+
+# Resolve data files relative to this script, so the practical works whether
+# it is launched from the repository root or from this week's folder.
+BASE_DIR = Path(__file__).resolve().parent
+
+# Exercise 1: Count words, lines and characters in a text file.
+sample_path = BASE_DIR / "sample.txt"
+with sample_path.open("r", encoding="utf-8") as file:
     text = file.read()
 
 lines = text.splitlines()
@@ -14,42 +20,47 @@ print("Lines:", len(lines))
 print("Words:", len(words))
 print("Characters:", characters)
 
-# Exercise 2: Write and read a CSV file
-# The csv module makes it possible to store rows and read them back later.
-import csv
-
+# Exercise 2: Write and read a CSV file.
+# The file is saved beside this script, not in the caller's working directory.
 rows = [
     ["Name", "Score"],
     ["Ada", 78],
-    ["Bola", 65]
+    ["Bola", 65],
 ]
 
-with open("scores.csv", "w", newline="", encoding="utf-8") as file:
+scores_path = BASE_DIR / "scores.csv"
+with scores_path.open("w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
     writer.writerows(rows)
 
-with open("scores.csv", "r", newline="", encoding="utf-8") as file:
+with scores_path.open("r", newline="", encoding="utf-8") as file:
     reader = csv.reader(file)
     for row in reader:
         print(row)
 
-# Exercise 3: Simple student database in a file
-# This basic example stores student records in a CSV file. It demonstrates adding and viewing records.
-import csv
+# Exercise 3: Simple student database in a CSV file.
+# Records are appended so previous student entries are retained.
+students_path = BASE_DIR / "students.csv"
+name = input("Enter student name: ").strip()
+score = input("Enter score: ").strip()
 
-filename = "students.csv"
+if not name:
+    print("Student name cannot be empty.")
+else:
+    try:
+        numeric_score = float(score)
+        if not 0 <= numeric_score <= 100:
+            raise ValueError
+    except ValueError:
+        print("Please enter a valid score from 0 to 100.")
+    else:
+        with students_path.open("a", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow([name, score])
 
-name = input("Enter student name: ")
-score = input("Enter score: ")
-
-with open(filename, "a", newline="", encoding="utf-8") as file:
-    writer = csv.writer(file)
-    writer.writerow([name, score])
-
-print("Student record saved.")
-
-with open(filename, "r", newline="", encoding="utf-8") as file:
-    reader = csv.reader(file)
-    print("\nSaved records:")
-    for row in reader:
-        print(row)
+        print("Student record saved.")
+        with students_path.open("r", newline="", encoding="utf-8") as file:
+            reader = csv.reader(file)
+            print("\nSaved records:")
+            for row in reader:
+                print(row)
