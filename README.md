@@ -1,71 +1,48 @@
-# COS 103 Python Practicals
+# COS103 Python Practicals (Weeks 1–12)
 
-Python practical exercises for COS 103. The repository currently contains the completed Week 11 and Week 12 exercises.
+This repository contains beginner-friendly Python practicals, with each week in its own folder. Each Week 1–10 folder includes a Python source file and a result snapshot under `results/result_snapshot.svg`.
 
-## Project structure
+## Weekly guide
 
-```text
-COS103-Python-Practicals/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── Week_11_Data_Analysis/
-│   ├── Iris.csv
-│   ├── week11_iris_analysis.py
-│   └── graphs/
-│       ├── iris_species_count.png
-│       ├── iris_petal_scatter.png
-│       └── iris_sepal_hist.png
-└── Week_12_Decision_Tree/
-    ├── Iris.csv
-    ├── week12_decision_tree.py
-    └── decision_tree.png
-```
+| Week | Topic | Extra files / output |
+|---|---|---|
+| 1 | Python introduction, arithmetic and calculator | Result snapshot |
+| 2 | Numbers, variables, data types and shape areas | Result snapshot |
+| 3 | Comparisons, logic, conditionals and grading | Result snapshot |
+| 4 | Strings, palindromes and Hangman | Result snapshot |
+| 5 | Lists, sets and dictionaries | Result snapshot |
+| 6 | Loops, prime numbers, multiplication table and guessing game | Result snapshot |
+| 7 | Functions, lambda, map and filter | Result snapshot |
+| 8 | Recursion, decorators and Tower of Hanoi | Result snapshot |
+| 9 | File handling and CSV | `sample.txt`, `scores.csv`, `students.csv`, result snapshot |
+| 10 | NumPy arrays and matrix multiplication | Result snapshot |
+| 11 | Iris dataset analysis and graphs | Iris CSV and generated graphs |
+| 12 | Decision-tree classification | Iris CSV and decision-tree visualization |
 
-## Week 11 — Iris data analysis
+## Requirements
 
-The script uses pandas to inspect the Iris dataset and prints the first rows, dataset dimensions, missing-value counts, summary statistics, and counts by species. It generates three charts:
+- Python 3.10 or newer is recommended.
+- Weeks 1–9 use the Python standard library.
+- Week 10 requires NumPy.
+- Weeks 11–12 use pandas, matplotlib and scikit-learn.
 
-- `graphs/iris_species_count.png` — number of flowers in each species
-- `graphs/iris_petal_scatter.png` — petal length compared with petal width, grouped by species
-- `graphs/iris_sepal_hist.png` — distribution of sepal length
-
-Run it from the repository root:
-
-```bash
-python Week_11_Data_Analysis/week11_iris_analysis.py
-```
-
-## Week 12 — Decision tree classification
-
-The script trains a scikit-learn Decision Tree classifier to predict Iris species from the four flower measurements. It uses an 80/20 train-test split with stratification and a fixed random seed, then prints accuracy, weighted precision, weighted recall, and the confusion matrix. It saves the model diagram as `Week_12_Decision_Tree/decision_tree.png`.
-
-Run it from the repository root:
-
-```bash
-python Week_12_Decision_Tree/week12_decision_tree.py
-```
-
-With the supplied dataset and current settings, the expected accuracy is approximately **0.9333**. Results may vary if the data or settings change.
-
-## Setup
-
-Python 3.10 or newer is recommended.
-
-Install the dependencies from the repository root:
+Install the required packages from the repository root:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-The scripts load `Iris.csv` relative to their own locations, so they do not depend on the current working directory. Week 11 creates the `graphs/` output folder automatically.
+## Running a practical
 
-## Dataset
+Open a terminal at the repository root and run a week's script. For example:
 
-The Iris dataset contains 150 observations across three species. A copy is kept inside each practical's folder so each script can run independently.
+```bash
+python Week_01_Introduction_to_Python/week_01.py
+python Week_10_NumPy/week_10.py
+```
 
-Dataset reference: [Iris Species — Kaggle](https://www.kaggle.com/datasets/uciml/iris)
+For Week 9, the script expects `sample.txt`, `scores.csv` and `students.csv` in the same folder as `week_09.py`. The sample files are included. The script rewrites `scores.csv` and appends new records to `students.csv` when you run it.
 
-## Scope
+The result snapshots are sample outputs from representative runs. Interactive programs will display prompts and results based on the values you enter. Do not enter a real password into the Week 3 classroom example.
 
-Weeks 11 and 12 are currently included in this GitHub repository. Add the earlier practicals in their own week folders when those files are ready.
+Weeks 11–12 include the Iris dataset and their own visual outputs.
