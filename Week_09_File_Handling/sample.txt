@@ -1,0 +1,2 @@
+COS103 Python file handling practical.
+This sample file is used to count lines, words and characters.
