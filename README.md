@@ -17,9 +17,6 @@ Files:
 - `Week_11_Data_Analysis/week11_iris_analysis.py`
 - `Week_11_Data_Analysis/Iris.csv`
 - `Week_11_Data_Analysis/graphs/`
- <img width="640" height="480" alt="iris_sepal_hist" src="https://github.com/user-attachments/assets/b22e0999-342f-45d3-8332-9171554a5ba8" />
-<img width="640" height="480" alt="iris_petal_scatter" src="https://github.com/user-attachments/assets/442be056-2e8d-48b6-9694-a32e588d8f8b" />
-<img width="640" height="480" alt="iris_species_count" src="https://github.com/user-attachments/assets/30727da6-eff2-4dcb-985a-e09c9130b99d" />
 
 ### Week 12 — Decision Tree Classification
 - Uses the four Iris measurements as features.
@@ -32,7 +29,6 @@ Files:
 - `Week_12_Decision_Tree/week12_decision_tree.py`
 - `Week_12_Decision_Tree/Iris.csv`
 - `Week_12_Decision_Tree/decision_tree.png`
-- <img width="800" height="467" alt="decision_tree" src="https://github.com/user-attachments/assets/51137cd2-560d-4856-b58b-36f5a60fcbcd" />
 
 
 ### Results
